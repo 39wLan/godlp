@@ -27,6 +27,8 @@ func bindataRead(data []byte, name string) ([]byte, error) {
 	_, err = io.Copy(&buf, gz)
 	clErr := gz.Close()
 
+	// clErr := gz.Close()
+
 	if err != nil {
 		return nil, fmt.Errorf("read %q: %w", name, err)
 	}
